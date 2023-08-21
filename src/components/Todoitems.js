@@ -1,20 +1,24 @@
 import React from 'react'
 
-const Todoitems = ({items}) => {
+const Todoitems = ({items,deleted,edited}) => {
   return (
-    <div className='container mt-4 mx-auto row justify-content-center w-50'>
-        {
-            items.map((value)=>{
-               return(
-                <div className='col-7 hover bg-success rounded-pill mt-3' key={value.id}>
-                    <span className='fs-5 btn'>{value.name}</span>
-                    <span className='float-end btn fs-4'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                    <span className='float-end btn fs-4'><i class="fa fa-trash" aria-hidden="true"></i></span>
-                </div>) 
+  <>
+    {
+      items.map((value)=>{
+        return(
+                 <div className='container mt-4 mx-auto row justify-content-center align-item-center w-50 bg-success rounded-pill' key={value.id}>
+                <div className='col-6 fs-5 my-auto'><div className='align-middle'>{value.name}
+                  </div>
+                </div> 
+                <div className="col-4 hover">
+                    <span className='float-end btn fs-4' onClick={()=>{edited(value.id)}}><i className="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                    <span className='float-end btn fs-4' onClick={()=>{deleted(value.id)}}><i className="fa fa-trash" aria-hidden="true"></i></span>
+                </div>
+                </div>)
             })
-        }
+          }
+          </>
       
-    </div>
   )
 }
 
