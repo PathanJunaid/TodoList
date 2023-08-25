@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.2930fd1c.css","mappings":"AAAA,YACI,kBAEJ","sources":["App.css"],"sourcesContent":["hover:hover{\r\n    background: lightcyan;\r\n    /* color: kdar; */\r\n}"],"names":[],"sourceRoot":""}
