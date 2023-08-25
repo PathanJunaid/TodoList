@@ -68,7 +68,7 @@ const Todo = () => {
                 <div className='row flex-lg-row  text-center py-4 justify-content-center align-items-center'>
                     <div className='col-10 col-lg-5'>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" value={Inputdata} onChange={(event) => { setInputdata(event.target.value) }}
+                            <input type="text" class="form-control py-2" value={Inputdata} onChange={(event) => { setInputdata(event.target.value) }}
                                 placeholder='Enter the task' aria-label="Recipient's username" aria-describedby="basic-addon2" />
                             <span class="input-group-text btn btn-primary" onClick={() => { additems() }} id="basic-addon2">{togglebtn === true ? <i className="fa fa-pencil-square-o" aria-hidden="true"></i> : <i className="fas fa-plus" aria-hidden="true"></i>}</span>
                         </div>
